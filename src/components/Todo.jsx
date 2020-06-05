@@ -5,9 +5,9 @@ function Todo(props) {
 
     return (
         <div className='todo'>
-            <input type='checkbox' onClick={() => setCross(!cross)} />
+            <input className="checkBox" type='checkbox' onClick={() => setCross(!cross)} />
             <span className={cross ? 'crossed' : ''}>{props.name}</span>
-            <span onClick={() => props.removeItem(props.id)}>X</span>
+            <span className="item" onClick={() => props.removeItem(props.id)}><i className="fas fa-trash-alt"></i></span>
         </div>
     )
 }

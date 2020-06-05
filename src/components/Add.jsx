@@ -15,7 +15,7 @@ function Add(props) {
     return (
         <div className='add'>
             <input placeholder='Add a new item' value={newItem} onChange={e => changeText(e)} />
-            <button className='add-button' onClick={add}>Add</button>
+            <button className='btn btn-dark' onClick={add}>Add</button>
         </div>
     )
 }

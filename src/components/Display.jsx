@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Add from './Add';
 import Todo from './Todo';
+require('bootstrap');
 
 function Display() {
     const [toDoList, setToDoList] = useState([]);
@@ -14,8 +15,8 @@ function Display() {
     return (
         <div>
             <Add addItem={addItem} />
-            <button onClick={resetList}>Reset List</button>
             {toDoList.map((v, i) => <Todo key={i} id={i} name={v} removeItem={removeItem} />)}
+            <button className="btn btn-dark" onClick={resetList}>Reset List</button>
         </div>
     )
 }
